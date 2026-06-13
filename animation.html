@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Word Animation</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            background-color: #fafafa;
+        }
+        .animation-container {
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 3rem;
+            color: #333;
+            user-select: none;
+        }
+        .word {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0s; /* We'll control opacity via JS */
+        }
+    </style>
+</head>
+<body>
+    <div class="animation-container">
+        <span class="word" id="word1"></span>
+        <span class="word" id="word2"></span>
+    </div>
+
+    <script>
+        const words = ["new", "amazing", "wonderful", "beautiful", "smart"];
+        const wordDuration = 2000; // ms each word fully visible
+        const fadeDuration = 500;  // ms crossfade duration
+        const totalCycle = wordDuration * words.length; // time for a full loop without overlap
+
+        const word1 = document.getElementById('word1');
+        const word2 = document.getElementById('word2');
+
+        // Initialize
+        word1.textContent = words[0];
+        word2.textContent = words[1];
+        let startTime = null;
+
+        function update(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+
+            // Position within the cycle (excluding overlap, we'll handle overlap via fade)
+            const cyclePos = elapsed % totalCycle;
+            const wordIndex = Math.floor(cyclePos / wordDuration);
+            const nextIndex = (wordIndex + 1) % words.length;
+
+            // Time within current word's segment
+            const segmentPos = cyclePos % wordDuration;
+            let fade = 0;
+            if (segmentPos >= wordDuration - fadeDuration) {
+                fade = (segmentPos - (wordDuration - fadeDuration)) / fadeDuration;
+                // Clamp
+                if (fade > 1) fade = 1;
+            }
+
+            // Update text (only when fade is 0 or 1 to avoid flicker)
+            if (fade === 0) {
+                word1.textContent = words[wordIndex];
+                word2.textContent = words[nextIndex];
+            } else if (fade === 1) {
+                // After fade completes, we'll swap on next frame; but keep as is
+                // Ensure correct words are set
+                word1.textContent = words[wordIndex];
+                word2.textContent = words[nextIndex];
+            }
+
+            // Apply opacity
+            word1.style.opacity = (1 - fade).toString();
+            word2.style.opacity = fade.toString();
+
+            requestAnimationFrame(update);
+        }
+
+        requestAnimationFrame(update);
+    </script>
+</body>
+</html>
