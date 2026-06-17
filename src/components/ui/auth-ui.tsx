@@ -350,7 +350,7 @@ export function AuthUI({ signInContent = {}, signUpContent = {}, onClose }: Auth
         style={{ backgroundImage: `url(${currentContent.image.src})` }}
         key={currentContent.image.src}
       >
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-x-0 bottom-0 h-[200px] bg-gradient-to-t from-[#060608] to-transparent z-10" />
         
         <div className="absolute inset-0 z-20 flex h-full flex-col items-center justify-end p-8 pb-16">
