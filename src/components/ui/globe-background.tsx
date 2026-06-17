@@ -460,7 +460,7 @@ export const GlobeBackground: React.FC<GlobeBackgroundProps> = ({ className = ""
     <div ref={containerRef} className={`fixed inset-0 ${className}`}>
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
       {/* Light blur overlay for better text readability */}
-      <div className="absolute inset-0 bg-[#060608]/45 backdrop-blur-[2.5px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[#060608]/65 backdrop-blur-[5px] pointer-events-none" />
     </div>
   );
 };
