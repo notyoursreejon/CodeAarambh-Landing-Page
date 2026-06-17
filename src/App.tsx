@@ -14,6 +14,8 @@ import {
 import logo from "@/assets/logo.png";
 import { GlobeBackground } from "@/components/ui/globe-background";
 import RuixenMoonChat from "@/components/ui/ruixen-moon-chat";
+import ScrollAreaDemo from "@/components/ui/scroll-area-1";
+import ScrollAreaHorizontalDemo from "@/components/ui/scroll-area-horizontal-demo";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import { ZoomParallax } from "@/components/ui/zoom-parallax";
 import { Testimonials } from "@/components/ui/twitter-testimonial-cards";
@@ -907,6 +909,18 @@ export default function CustomApp() {
           <p className="text-gray-400 max-w-xl mx-auto mt-4 text-sm sm:text-base font-medium">
             Scroll down to watch our asset grid zoom open and scale with deep parallax effects.
           </p>
+        </div>
+
+        {/* Scroll Demos inside Developer Canvas Visuals */}
+        <div className="relative z-10 max-w-4xl mx-auto px-6 mb-16 flex flex-col sm:flex-row gap-8 items-center justify-center">
+          <div className="flex flex-col items-center gap-3">
+            <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">Vertical Tag Feed</span>
+            <ScrollAreaDemo />
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">Horizontal Artwork Carousel</span>
+            <ScrollAreaHorizontalDemo />
+          </div>
         </div>
 
         {/* ZoomParallax Component */}
