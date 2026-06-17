@@ -76,7 +76,7 @@ export default function RuixenMoonChat() {
         <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight leading-none text-transparent drop-shadow-sm bg-gradient-to-r from-red-500 via-orange-400 to-blue-500 bg-clip-text">
           CodeAarambh
         </h1>
-        <p className="mt-4 text-base sm:text-lg text-neutral-300 font-medium tracking-wide min-h-[1.5em] flex items-center justify-center">
+        <div className="mt-4 text-base sm:text-lg text-neutral-300 font-medium tracking-wide min-h-[1.5em] flex items-center justify-center">
           <span>The Beginning of </span>
           <Typewriter
             text={[
@@ -115,7 +115,7 @@ export default function RuixenMoonChat() {
             deleteSpeed={40}
             cursorChar={"_"}
           />
-        </p>
+        </div>
       </div>
 
       {/* Input Box Section */}

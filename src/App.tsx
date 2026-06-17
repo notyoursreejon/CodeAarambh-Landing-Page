@@ -14,6 +14,7 @@ import {
 import logo from "@/assets/logo.png";
 import { GlobeBackground } from "@/components/ui/globe-background";
 import RuixenMoonChat from "@/components/ui/ruixen-moon-chat";
+import { AuthUI } from "@/components/ui/auth-ui";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import { ScrollVelocity } from "@/components/ui/scroll-velocity";
 import { Testimonials } from "@/components/ui/twitter-testimonial-cards";
@@ -159,6 +160,7 @@ export default function App() {
 
   // Rotating title state
   const [titleNumber, setTitleNumber] = useState(0);
+  const [showLogin, setShowLogin] = useState<boolean>(false);
   const titles = ["amazing", "new", "wonderful", "beautiful", "smart"];
 
   useEffect(() => {
@@ -313,10 +315,10 @@ export default function CustomApp() {
           <a href="#manifest" className="hover:text-white transition-colors">Enterprise</a>
         </nav>
         <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" className="hover:bg-white/5 font-semibold text-xs tracking-wider uppercase text-gray-300">
+          <Button variant="ghost" size="sm" onClick={() => setShowLogin(true)} className="hover:bg-white/5 font-semibold text-xs tracking-wider uppercase text-gray-300">
             Log in
           </Button>
-          <Button size="sm" className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-semibold text-xs tracking-wider uppercase shadow-lg shadow-red-500/20 border-0 px-4 py-2">
+          <Button size="sm" onClick={() => setShowLogin(true)} className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-semibold text-xs tracking-wider uppercase shadow-lg shadow-red-500/20 border-0 px-4 py-2">
             Get started
           </Button>
         </div>
@@ -862,7 +864,7 @@ export default function CustomApp() {
               </ul>
             </div>
             
-            <Button className="w-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 text-white font-bold text-xs uppercase tracking-wider py-3 mt-4">
+            <Button onClick={() => setShowLogin(true)} className="w-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 text-white font-bold text-xs uppercase tracking-wider py-3 mt-4">
               Get Started Free
             </Button>
           </div>
@@ -911,7 +913,7 @@ export default function CustomApp() {
               </ul>
             </div>
             
-            <Button className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-bold text-xs uppercase tracking-wider py-3 shadow-md shadow-red-500/20 border-0 mt-4">
+            <Button onClick={() => setShowLogin(true)} className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-bold text-xs uppercase tracking-wider py-3 shadow-md shadow-red-500/20 border-0 mt-4">
               Claim Launch Offer
             </Button>
           </div>
@@ -1163,6 +1165,12 @@ export default function CustomApp() {
       <div className="fixed bottom-4 right-4 z-50 pointer-events-none">
         <MorphPanel onSubmit={(prompt) => handlePromptSubmit(undefined, prompt)} />
       </div>
+
+      {showLogin && (
+        <div className="fixed inset-0 z-[100] w-full h-screen bg-[#060608]/90 backdrop-blur-xl overflow-y-auto animate-fade-in">
+          <AuthUI onClose={() => setShowLogin(false)} />
+        </div>
+      )}
     </div>
   );
 }
