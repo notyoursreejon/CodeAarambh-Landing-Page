@@ -90,6 +90,30 @@ const parallaxImages = [
   {
     src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000",
     alt: "Modern clean coding setup"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?q=80&w=1000",
+    alt: "AI Bot Concept representation"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000",
+    alt: "AI Companion neural network interface"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000",
+    alt: "Python programming code environment"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1000",
+    alt: "Web developer designing user experience wireframes"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1000",
+    alt: "UI/UX designer wireframe sketch workspace"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1675557009875-436f09780264?q=80&w=1000",
+    alt: "Abstract AI neural net visuals"
   }
 ];
 
