@@ -362,7 +362,7 @@ export default function CustomApp() {
                 key={i}
                 type="button"
                 onClick={() => handleQuickPrompt(p)}
-                className="px-3 py-1.5 rounded-full border border-white/5 bg-[#0b0b0f]/50 hover:bg-white/5 hover:border-white/10 hover:text-gray-300 transition-all cursor-pointer text-left truncate max-w-xs"
+                className="px-3 py-1.5 rounded-full border border-white/5 bg-[#0b0b0f]/80 backdrop-blur-sm hover:bg-white/5 hover:border-white/10 hover:text-gray-300 transition-all cursor-pointer text-left truncate max-w-xs"
               >
                 {p}
               </button>
@@ -762,7 +762,7 @@ export default function CustomApp() {
               badge: "INSTANT SCAFFOLD"
             }
           ].map((item, idx) => (
-            <div key={idx} className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0e]/40 flex flex-col justify-between h-48 hover:border-white/10 transition-colors">
+            <div key={idx} className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0e]/80 backdrop-blur-md flex flex-col justify-between h-48 hover:border-white/10 transition-colors">
               <div className="space-y-2.5">
                 <div className="flex items-center justify-between">
                   <h4 className="font-bold text-base text-zinc-200">{item.title}</h4>
@@ -770,7 +770,7 @@ export default function CustomApp() {
                     {item.badge}
                   </Badge>
                 </div>
-                <p className="text-zinc-500 text-xs leading-relaxed">{item.desc}</p>
+                <p className="text-zinc-400 text-xs leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -778,7 +778,7 @@ export default function CustomApp() {
       </section>
 
       {/* 6. Security Manifest Section */}
-      <section id="manifest" className="py-16 bg-gradient-to-b from-transparent via-[#0b0b0f]/40 to-transparent border-y border-white/5">
+      <section id="manifest" className="py-16 bg-gradient-to-b from-transparent via-[#060608]/90 to-transparent backdrop-blur-md border-y border-white/5">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
@@ -822,7 +822,7 @@ export default function CustomApp() {
             </div>
 
             {/* Geographical collab badge */}
-            <div className="bg-[#0b0b0f] border border-white/10 rounded-2xl p-8 text-center space-y-6 max-w-md mx-auto lg:mr-0 shadow-xl">
+            <div className="bg-[#0b0b0f]/80 backdrop-blur-md border border-white/10 rounded-2xl p-8 text-center space-y-6 max-w-md mx-auto lg:mr-0 shadow-xl">
               <div className="size-16 rounded-full bg-red-600/10 border border-red-500/30 flex items-center justify-center mx-auto">
                 <Compass className="size-8 text-red-500" />
               </div>
@@ -985,7 +985,7 @@ export default function CustomApp() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           {/* Phase 1 */}
-          <div className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0e]/40 space-y-4">
+          <div className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0e]/80 backdrop-blur-md space-y-4">
             <Badge className="bg-green-500/10 border border-green-500/30 text-green-400 text-[9px] font-bold uppercase tracking-wider rounded">
               AVAILABLE NOW
             </Badge>
@@ -1000,7 +1000,7 @@ export default function CustomApp() {
           </div>
 
           {/* Phase 2 */}
-          <div className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0e]/40 space-y-4">
+          <div className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0e]/80 backdrop-blur-md space-y-4">
             <Badge className="bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[9px] font-bold uppercase tracking-wider rounded">
               IN PROGRESS
             </Badge>
@@ -1015,7 +1015,7 @@ export default function CustomApp() {
           </div>
 
           {/* Phase 3 */}
-          <div className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0e]/40 space-y-4">
+          <div className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0e]/80 backdrop-blur-md space-y-4">
             <Badge className="bg-red-500/15 border border-red-500/30 text-red-400 text-[9px] font-bold uppercase tracking-wider rounded">
               COMING SOON
             </Badge>
