@@ -14,7 +14,6 @@ import {
 import logo from "@/assets/logo.png";
 import { GlobeBackground } from "@/components/ui/globe-background";
 import { GlowCard } from "@/components/ui/spotlight-card";
-import DemoPage from "@/components/ui/demo";
 import { ZoomParallax } from "@/components/ui/zoom-parallax";
 import { Testimonials } from "@/components/ui/twitter-testimonial-cards";
 import { Button } from "@/components/ui/button";
@@ -133,11 +132,10 @@ export default function App() {
 };
 
 export default function App() {
-  const [showWorkspace, setShowWorkspace] = useState(false);
 
   // Rotating title state
   const [titleNumber, setTitleNumber] = useState(0);
-  const titles = ["lite dark", "amazing", "new", "wonderful", "beautiful", "smart"];
+  const titles = ["amazing", "new", "wonderful", "beautiful", "smart"];
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -296,30 +294,17 @@ export default function CustomApp() {
           <a href="#manifest" className="hover:text-white transition-colors">Enterprise</a>
         </nav>
         <div className="flex items-center gap-4">
-          <Button 
-            onClick={() => setShowWorkspace(!showWorkspace)}
-            variant="ghost" 
-            size="sm" 
-            className="hover:bg-white/5 font-semibold text-xs tracking-wider uppercase text-gray-300"
-          >
-            {showWorkspace ? "Landing Page" : "Workspace"}
+          <Button variant="ghost" size="sm" className="hover:bg-white/5 font-semibold text-xs tracking-wider uppercase text-gray-300">
+            Log in
           </Button>
-          <Button 
-            onClick={() => setShowWorkspace(true)}
-            size="sm" 
-            className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-semibold text-xs tracking-wider uppercase shadow-lg shadow-red-500/20 border-0 px-4 py-2"
-          >
-            {showWorkspace ? "Active" : "Get started"}
+          <Button size="sm" className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-semibold text-xs tracking-wider uppercase shadow-lg shadow-red-500/20 border-0 px-4 py-2">
+            Get started
           </Button>
         </div>
       </header>
 
-      {showWorkspace ? (
-        <DemoPage />
-      ) : (
-        <>
-          {/* 2. Hero Section (Including 3D Globe Background) */}
-          <section id="hero" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+      {/* 2. Hero Section (Including 3D Globe Background) */}
+      <section id="hero" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
         {/* Dark radial overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#060608]/10 via-[#060608]/60 to-[#060608] z-10 pointer-events-none" />
 
@@ -622,7 +607,7 @@ export default function CustomApp() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             
             {/* Step 1 */}
-            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md group hover:border-white/10 transition-colors">
+            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#0b0b0f]/50 backdrop-blur-sm group hover:border-white/10 transition-colors">
               <span className="text-4xl font-extrabold text-red-600/20 group-hover:text-red-600/40 transition-colors block mb-4">01</span>
               <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">Prompt</span>
               <h3 className="text-lg font-bold text-white mb-2">1. Describe the app</h3>
@@ -632,7 +617,7 @@ export default function CustomApp() {
             </div>
 
             {/* Step 2 */}
-            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md group hover:border-white/10 transition-colors">
+            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#0b0b0f]/50 backdrop-blur-sm group hover:border-white/10 transition-colors">
               <span className="text-4xl font-extrabold text-red-600/20 group-hover:text-red-600/40 transition-colors block mb-4">02</span>
               <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">Project Files</span>
               <h3 className="text-lg font-bold text-white mb-2">2. Generate the project</h3>
@@ -642,7 +627,7 @@ export default function CustomApp() {
             </div>
 
             {/* Step 3 */}
-            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md group hover:border-white/10 transition-colors">
+            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#0b0b0f]/50 backdrop-blur-sm group hover:border-white/10 transition-colors">
               <span className="text-4xl font-extrabold text-red-600/20 group-hover:text-red-600/40 transition-colors block mb-4">03</span>
               <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">Live Preview</span>
               <h3 className="text-lg font-bold text-white mb-2">3. Edit and preview</h3>
@@ -652,7 +637,7 @@ export default function CustomApp() {
             </div>
 
             {/* Step 4 */}
-            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md group hover:border-white/10 transition-colors">
+            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#0b0b0f]/50 backdrop-blur-sm group hover:border-white/10 transition-colors">
               <span className="text-4xl font-extrabold text-red-600/20 group-hover:text-red-600/40 transition-colors block mb-4">04</span>
               <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">Export / Github</span>
               <h3 className="text-lg font-bold text-white mb-2">4. Export or continue</h3>
@@ -837,7 +822,7 @@ export default function CustomApp() {
             </div>
 
             {/* Geographical collab badge */}
-            <div className="bg-[#08080c]/98 backdrop-blur-md border border-white/10 rounded-2xl p-8 text-center space-y-6 max-w-md mx-auto lg:mr-0 shadow-xl">
+            <div className="bg-[#0b0b0f] border border-white/10 rounded-2xl p-8 text-center space-y-6 max-w-md mx-auto lg:mr-0 shadow-xl">
               <div className="size-16 rounded-full bg-red-600/10 border border-red-500/30 flex items-center justify-center mx-auto">
                 <Compass className="size-8 text-red-500" />
               </div>
@@ -846,7 +831,7 @@ export default function CustomApp() {
                 Built for the web, made in Nepal in collab with India for developers, founders, and students worldwide.
               </p>
               <Separator className="bg-white/5" />
-              <Button onClick={() => setShowWorkspace(true)} className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-bold text-xs uppercase tracking-wider py-3 border-0">
+              <Button className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-bold text-xs uppercase tracking-wider py-3 border-0">
                 CREATE AN ACCOUNT
               </Button>
             </div>
@@ -877,7 +862,7 @@ export default function CustomApp() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
           
           {/* Free Tier */}
-          <div className="p-8 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md flex flex-col justify-between space-y-8 relative hover:border-white/10 transition-colors">
+          <div className="p-8 rounded-2xl border border-white/5 bg-[#0a0a0e]/40 flex flex-col justify-between space-y-8 relative hover:border-white/10 transition-colors">
             <div className="space-y-4">
               <Badge className="bg-zinc-800 border-transparent text-zinc-300 text-[9px] font-bold uppercase tracking-wider">
                 STANDARD PROTO
@@ -911,13 +896,13 @@ export default function CustomApp() {
               </ul>
             </div>
             
-            <Button onClick={() => setShowWorkspace(true)} className="w-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 text-white font-bold text-xs uppercase tracking-wider py-3 mt-4">
+            <Button className="w-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 text-white font-bold text-xs uppercase tracking-wider py-3 mt-4">
               Get Started Free
             </Button>
           </div>
 
           {/* Plus Premium Tier */}
-          <div className="p-8 rounded-2xl border border-red-500/20 bg-[#0b080b]/98 backdrop-blur-md flex flex-col justify-between space-y-8 relative shadow-lg shadow-red-950/10 hover:border-red-500/30 transition-colors">
+          <div className="p-8 rounded-2xl border border-red-500/20 bg-[#0c0a0c]/80 flex flex-col justify-between space-y-8 relative shadow-lg shadow-red-950/10 hover:border-red-500/30 transition-colors">
             
             {/* Developer Favorite badge */}
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-red-600 border border-red-500 text-white text-[9px] font-bold uppercase tracking-wider py-1 px-4 rounded-full shadow-md shadow-red-600/30">
@@ -960,7 +945,7 @@ export default function CustomApp() {
               </ul>
             </div>
             
-            <Button onClick={() => setShowWorkspace(true)} className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-bold text-xs uppercase tracking-wider py-3 shadow-md shadow-red-500/20 border-0 mt-4">
+            <Button className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-bold text-xs uppercase tracking-wider py-3 shadow-md shadow-red-500/20 border-0 mt-4">
               Claim Launch Offer
             </Button>
           </div>
@@ -1171,12 +1156,10 @@ export default function CustomApp() {
         </div>
       </footer>
 
-          {/* Floating AI Assistant in the bottom-right corner */}
-          <div className="fixed bottom-4 right-4 z-50 pointer-events-none">
-            <MorphPanel onSubmit={(prompt) => handlePromptSubmit(undefined, prompt)} />
-          </div>
-        </>
-      )}
+      {/* Floating AI Assistant in the bottom-right corner */}
+      <div className="fixed bottom-4 right-4 z-50 pointer-events-none">
+        <MorphPanel onSubmit={(prompt) => handlePromptSubmit(undefined, prompt)} />
+      </div>
     </div>
   );
 }
