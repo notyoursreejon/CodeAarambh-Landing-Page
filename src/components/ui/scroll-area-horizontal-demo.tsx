@@ -22,24 +22,24 @@ const works: Artwork[] = [
 
 export default function ScrollAreaHorizontalDemo() {
   return (
-    <ScrollArea className="bg-background/80 backdrop-blur-md w-96 rounded-md border border-white/10 text-white whitespace-nowrap">
+    <ScrollArea className="bg-transparent w-[300px] sm:w-[420px] rounded-md border border-white/10 whitespace-nowrap">
       <div className="flex w-max space-x-4 p-4">
         {works.map((artwork) => (
           <figure key={artwork.artist} className="shrink-0">
-            <div className="overflow-hidden rounded-md">
+            <div className="overflow-hidden rounded-md border border-white/5">
               <img
                 src={artwork.art}
                 alt={`Photo by ${artwork.artist}`}
-                className="aspect-[3/4] h-48 w-36 object-cover"
+                className="aspect-[3/4] h-44 w-32 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <figcaption className="text-zinc-400 pt-2 text-xs">
-              Photo by <span className="text-white font-semibold">{artwork.artist}</span>
+            <figcaption className="text-zinc-500 pt-2 text-xs">
+              Photo by <span className="text-zinc-300 font-semibold">{artwork.artist}</span>
             </figcaption>
           </figure>
         ))}
       </div>
-      <ScrollBar orientation="horizontal" />
+      <ScrollBar orientation="horizontal" className="bg-white/5" />
     </ScrollArea>
   );
 }

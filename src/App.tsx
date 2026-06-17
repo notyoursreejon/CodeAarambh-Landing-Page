@@ -14,10 +14,9 @@ import {
 import logo from "@/assets/logo.png";
 import { GlobeBackground } from "@/components/ui/globe-background";
 import RuixenMoonChat from "@/components/ui/ruixen-moon-chat";
+import { GlowCard } from "@/components/ui/spotlight-card";
 import ScrollAreaDemo from "@/components/ui/scroll-area-1";
 import ScrollAreaHorizontalDemo from "@/components/ui/scroll-area-horizontal-demo";
-import { GlowCard } from "@/components/ui/spotlight-card";
-import { ZoomParallax } from "@/components/ui/zoom-parallax";
 import { Testimonials } from "@/components/ui/twitter-testimonial-cards";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -63,37 +62,7 @@ function InstagramIcon({ className }: { className?: string }) {
   );
 }
 
-// Showcase images for ZoomParallax (high-quality Unsplash tech images)
-const parallaxImages = [
-  {
-    src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000",
-    alt: "Clean code on a screen"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000",
-    alt: "Software development server console"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000",
-    alt: "Developer workspace laptop"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000",
-    alt: "Digital system matrix grid"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1000",
-    alt: "Abstract visual tech coding"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1000",
-    alt: "Close-up mechanised programming keyboard"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000",
-    alt: "Modern clean coding setup"
-  }
-];
+
 
 // learningPaths constant removed
 
@@ -897,8 +866,8 @@ export default function CustomApp() {
         </div>
       </section>
 
-      {/* 9. Scroll Zoom Parallax */}
-      <section id="gallery" className="relative py-16">
+      {/* 9. Developer Canvas Visuals */}
+      <section id="gallery" className="relative py-16 border-t border-white/5">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 border-red-500/20 bg-red-950/10 text-red-400 uppercase tracking-wider text-[10px] font-bold">
             Asset Gallery
@@ -907,24 +876,23 @@ export default function CustomApp() {
             Developer Canvas Visuals
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto mt-4 text-sm sm:text-base font-medium">
-            Scroll down to watch our asset grid zoom open and scale with deep parallax effects.
+            Explore our interactive workspace layouts, release tag logs, and asset libraries.
           </p>
         </div>
 
-        {/* Scroll Demos inside Developer Canvas Visuals */}
-        <div className="relative z-10 max-w-4xl mx-auto px-6 mb-16 flex flex-col sm:flex-row gap-8 items-center justify-center">
-          <div className="flex flex-col items-center gap-3">
-            <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">Vertical Tag Feed</span>
+        <div className="flex flex-col md:flex-row items-stretch justify-center gap-8 max-w-5xl mx-auto px-6">
+          {/* Vertical scroll area card */}
+          <div className="p-8 rounded-2xl border border-white/5 bg-[#0a0a0e]/80 backdrop-blur-md shadow-xl flex flex-col items-center flex-1 max-w-sm">
+            <h3 className="text-sm font-bold text-zinc-300 mb-6 uppercase tracking-wider">Release Tags</h3>
             <ScrollAreaDemo />
           </div>
-          <div className="flex flex-col items-center gap-3">
-            <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">Horizontal Artwork Carousel</span>
+
+          {/* Horizontal scroll area card */}
+          <div className="p-8 rounded-2xl border border-white/5 bg-[#0a0a0e]/80 backdrop-blur-md shadow-xl flex flex-col items-center justify-between flex-1 max-w-xl">
+            <h3 className="text-sm font-bold text-zinc-300 mb-6 uppercase tracking-wider">Asset Library</h3>
             <ScrollAreaHorizontalDemo />
           </div>
         </div>
-
-        {/* ZoomParallax Component */}
-        <ZoomParallax images={parallaxImages} />
       </section>
 
       {/* 10. Roadmap Timeline (Evolution Path) */}
