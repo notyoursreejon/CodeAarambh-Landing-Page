@@ -92,28 +92,28 @@ const parallaxImages = [
     alt: "Modern clean coding setup"
   },
   {
-    src: "https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?q=80&w=1000",
-    alt: "AI Bot Concept representation"
+    src: "https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=1000",
+    alt: "Abstract artificial intelligence network nodes"
   },
   {
-    src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000",
-    alt: "AI Companion neural network interface"
+    src: "https://images.unsplash.com/photo-1580927751497-69f91a01e40a?q=80&w=1000",
+    alt: "Developer dual monitor programming environment"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1000",
+    alt: "UX UI web design layout blueprints"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000",
+    alt: "UX designer drafting mobile wireframe layout"
   },
   {
     src: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000",
-    alt: "Python programming code environment"
+    alt: "React frontend code inside IDE"
   },
   {
-    src: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1000",
-    alt: "Web developer designing user experience wireframes"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1000",
-    alt: "UI/UX designer wireframe sketch workspace"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1675557009875-436f09780264?q=80&w=1000",
-    alt: "Abstract AI neural net visuals"
+    src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000",
+    alt: "Vibrant abstract neural network brain"
   }
 ];
 
