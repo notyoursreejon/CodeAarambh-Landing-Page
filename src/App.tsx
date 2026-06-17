@@ -13,13 +13,13 @@ import {
 
 import logo from "@/assets/logo.png";
 import { GlobeBackground } from "@/components/ui/globe-background";
+import RuixenMoonChat from "@/components/ui/ruixen-moon-chat";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import { ZoomParallax } from "@/components/ui/zoom-parallax";
 import { Testimonials } from "@/components/ui/twitter-testimonial-cards";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { motion } from "framer-motion";
 import { LandingAccordionItem } from "@/components/ui/interactive-image-accordion";
 import { ExpandableTabs } from "@/components/ui/expandable-tabs";
 import { Boxes } from "@/components/ui/background-boxes";
@@ -173,11 +173,6 @@ export default function App() {
     setEditorCode(ideFiles[selectedFile]);
   }, [selectedFile]);
 
-  // Handle quick prompt clicks
-  const handleQuickPrompt = (prompt: string) => {
-    setPromptInput(prompt);
-    handlePromptSubmit(undefined, prompt);
-  };
 
   // Simulate prompt submission in our interactive IDE mockup
   const handlePromptSubmit = (e?: React.FormEvent, customPrompt?: string) => {
@@ -315,60 +310,7 @@ export default function CustomApp() {
             CodeAarambh AI Workspace
           </Badge>
           
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-none mb-6">
-            Build something
-            <br />
-            <span className="relative inline-flex justify-center h-[1.25em] w-full overflow-hidden text-center">
-              &nbsp;
-              {titles.map((title, index) => (
-                <motion.span
-                  key={index}
-                  className="absolute font-bold bg-gradient-to-r from-red-500 via-orange-400 to-red-600 bg-clip-text text-transparent"
-                  initial={{ opacity: 0, y: "-100%" }}
-                  transition={{ type: "spring", stiffness: 50 }}
-                  animate={
-                    titleNumber === index
-                      ? {
-                          y: 0,
-                          opacity: 1,
-                        }
-                      : {
-                          y: titleNumber > index ? "-150%" : "150%",
-                          opacity: 0,
-                        }
-                  }
-                >
-                  {title}
-                </motion.span>
-              ))}
-            </span>
-          </h1>
-          
-          <p className="text-gray-400 text-base sm:text-xl max-w-2xl mx-auto mb-8 leading-relaxed font-medium">
-            Create apps and websites by chatting with AI
-          </p>
-
-
-
-          {/* Quick Start Suggestions */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs text-gray-500">
-            <span className="font-medium">Try these:</span>
-            {[
-              "Build a dashboard with sales analytics chart",
-              "Create a dark-mode portfolio landing page",
-              "Generate a landing page for Nepal trekking"
-            ].map((p, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => handleQuickPrompt(p)}
-                className="px-3 py-1.5 rounded-full border border-white/5 bg-[#0b0b0f]/80 backdrop-blur-sm hover:bg-white/5 hover:border-white/10 hover:text-gray-300 transition-all cursor-pointer text-left truncate max-w-xs"
-              >
-                {p}
-              </button>
-            ))}
-          </div>
-
+          <RuixenMoonChat />
         </div>
       </section>
 
