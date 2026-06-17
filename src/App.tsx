@@ -622,7 +622,7 @@ export default function CustomApp() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             
             {/* Step 1 */}
-            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/85 backdrop-blur-md group hover:border-white/10 transition-colors">
+            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md group hover:border-white/10 transition-colors">
               <span className="text-4xl font-extrabold text-red-600/20 group-hover:text-red-600/40 transition-colors block mb-4">01</span>
               <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">Prompt</span>
               <h3 className="text-lg font-bold text-white mb-2">1. Describe the app</h3>
@@ -632,7 +632,7 @@ export default function CustomApp() {
             </div>
 
             {/* Step 2 */}
-            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/85 backdrop-blur-md group hover:border-white/10 transition-colors">
+            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md group hover:border-white/10 transition-colors">
               <span className="text-4xl font-extrabold text-red-600/20 group-hover:text-red-600/40 transition-colors block mb-4">02</span>
               <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">Project Files</span>
               <h3 className="text-lg font-bold text-white mb-2">2. Generate the project</h3>
@@ -642,7 +642,7 @@ export default function CustomApp() {
             </div>
 
             {/* Step 3 */}
-            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/85 backdrop-blur-md group hover:border-white/10 transition-colors">
+            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md group hover:border-white/10 transition-colors">
               <span className="text-4xl font-extrabold text-red-600/20 group-hover:text-red-600/40 transition-colors block mb-4">03</span>
               <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">Live Preview</span>
               <h3 className="text-lg font-bold text-white mb-2">3. Edit and preview</h3>
@@ -652,7 +652,7 @@ export default function CustomApp() {
             </div>
 
             {/* Step 4 */}
-            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/85 backdrop-blur-md group hover:border-white/10 transition-colors">
+            <div className="relative p-6 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md group hover:border-white/10 transition-colors">
               <span className="text-4xl font-extrabold text-red-600/20 group-hover:text-red-600/40 transition-colors block mb-4">04</span>
               <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">Export / Github</span>
               <h3 className="text-lg font-bold text-white mb-2">4. Export or continue</h3>
@@ -837,7 +837,7 @@ export default function CustomApp() {
             </div>
 
             {/* Geographical collab badge */}
-            <div className="bg-[#08080c]/85 backdrop-blur-md border border-white/10 rounded-2xl p-8 text-center space-y-6 max-w-md mx-auto lg:mr-0 shadow-xl">
+            <div className="bg-[#08080c]/98 backdrop-blur-md border border-white/10 rounded-2xl p-8 text-center space-y-6 max-w-md mx-auto lg:mr-0 shadow-xl">
               <div className="size-16 rounded-full bg-red-600/10 border border-red-500/30 flex items-center justify-center mx-auto">
                 <Compass className="size-8 text-red-500" />
               </div>
@@ -877,7 +877,7 @@ export default function CustomApp() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
           
           {/* Free Tier */}
-          <div className="p-8 rounded-2xl border border-white/5 bg-[#08080c]/85 backdrop-blur-md flex flex-col justify-between space-y-8 relative hover:border-white/10 transition-colors">
+          <div className="p-8 rounded-2xl border border-white/5 bg-[#08080c]/98 backdrop-blur-md flex flex-col justify-between space-y-8 relative hover:border-white/10 transition-colors">
             <div className="space-y-4">
               <Badge className="bg-zinc-800 border-transparent text-zinc-300 text-[9px] font-bold uppercase tracking-wider">
                 STANDARD PROTO
@@ -917,7 +917,7 @@ export default function CustomApp() {
           </div>
 
           {/* Plus Premium Tier */}
-          <div className="p-8 rounded-2xl border border-red-500/20 bg-[#0b080b]/90 backdrop-blur-md flex flex-col justify-between space-y-8 relative shadow-lg shadow-red-950/10 hover:border-red-500/30 transition-colors">
+          <div className="p-8 rounded-2xl border border-red-500/20 bg-[#0b080b]/98 backdrop-blur-md flex flex-col justify-between space-y-8 relative shadow-lg shadow-red-950/10 hover:border-red-500/30 transition-colors">
             
             {/* Developer Favorite badge */}
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-red-600 border border-red-500 text-white text-[9px] font-bold uppercase tracking-wider py-1 px-4 rounded-full shadow-md shadow-red-600/30">
