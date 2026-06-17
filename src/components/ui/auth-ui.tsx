@@ -9,6 +9,9 @@ import { Eye, EyeOff, X } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+import signupBg from "@/assets/signup_bg.png";
+import signinBg from "@/assets/signin_bg.png";
+
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -283,8 +286,8 @@ interface AuthUIProps {
 
 const defaultSignInContent = {
     image: {
-        src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000",
-        alt: "A beautiful interior design for sign-in"
+        src: signinBg,
+        alt: "A beautiful astronaut planting the flag for sign-in"
     },
     quote: {
         text: "Welcome Back! The journey continues.",
@@ -294,8 +297,8 @@ const defaultSignInContent = {
 
 const defaultSignUpContent = {
     image: {
-        src: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000",
-        alt: "A vibrant, modern space for new beginnings"
+        src: signupBg,
+        alt: "A meditating astronaut floating in space for sign-up"
     },
     quote: {
         text: "Create an account. A new chapter awaits.",
