@@ -92,11 +92,11 @@ const parallaxImages = [
     alt: "Modern clean coding setup"
   },
   {
-    src: "https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=1000",
+    src: "https://images.unsplash.com/photo-1527474305487-b87b222841cc?q=80&w=1000",
     alt: "Abstract artificial intelligence network nodes"
   },
   {
-    src: "https://images.unsplash.com/photo-1580927751497-69f91a01e40a?q=80&w=1000",
+    src: "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1000",
     alt: "Developer dual monitor programming environment"
   },
   {
