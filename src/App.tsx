@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 import logo from "@/assets/logo.png";
-import { HeroShader } from "@/components/ui/hero-shader-for-tunepact";
+import { GlobeBackground } from "@/components/ui/globe-background";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import { ZoomParallax } from "@/components/ui/zoom-parallax";
 import { Testimonials } from "@/components/ui/twitter-testimonial-cards";
@@ -132,9 +132,6 @@ export default function App() {
 };
 
 export default function App() {
-  const shaderShape = 4.0; // Wave shape by default
-  const shaderType = 3.0; // Bayer 8x8 by default
-  const pixelSize = 4.0; // Dither pixel size
 
   // Rotating title state
   const [titleNumber, setTitleNumber] = useState(0);
@@ -278,6 +275,7 @@ export default function CustomApp() {
 
   return (
     <div className="min-h-screen bg-[#060608] text-white selection:bg-red-500/30 selection:text-red-200 overflow-x-clip font-sans">
+      <GlobeBackground className="pointer-events-none opacity-50 z-0" />
       
       {/* 1. Header/Navigation */}
       <header className="fixed top-0 inset-x-0 h-16 border-b border-white/5 bg-[#060608]/75 backdrop-blur-md z-50 flex items-center justify-between px-6 md:px-12 transition-all">
@@ -305,18 +303,8 @@ export default function CustomApp() {
         </div>
       </header>
 
-      {/* 2. Hero Section (Including WebGL Shader background) */}
+      {/* 2. Hero Section (Including 3D Globe Background) */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-        {/* Fullscreen Interactive WebGL2 Shader */}
-        <HeroShader 
-          colorBack={[0.02, 0.02, 0.03, 1.0]} 
-          colorFront={[0.93, 0.25, 0.25, 1.0]} // Red
-          shape={shaderShape}
-          type={shaderType}
-          pxSize={pixelSize}
-          className="absolute inset-0 z-0" 
-        />
-        
         {/* Dark radial overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#060608]/10 via-[#060608]/60 to-[#060608] z-10 pointer-events-none" />
 
