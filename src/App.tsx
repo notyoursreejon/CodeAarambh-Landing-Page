@@ -15,8 +15,7 @@ import logo from "@/assets/logo.png";
 import { GlobeBackground } from "@/components/ui/globe-background";
 import RuixenMoonChat from "@/components/ui/ruixen-moon-chat";
 import { GlowCard } from "@/components/ui/spotlight-card";
-import ScrollAreaDemo from "@/components/ui/scroll-area-1";
-import ScrollAreaHorizontalDemo from "@/components/ui/scroll-area-horizontal-demo";
+import { ScrollVelocity } from "@/components/ui/scroll-velocity";
 import { Testimonials } from "@/components/ui/twitter-testimonial-cards";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -62,7 +61,37 @@ function InstagramIcon({ className }: { className?: string }) {
   );
 }
 
-
+// Showcase images for ZoomParallax (high-quality Unsplash tech images)
+const parallaxImages = [
+  {
+    src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000",
+    alt: "Clean code on a screen"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000",
+    alt: "Software development server console"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000",
+    alt: "Developer workspace laptop"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000",
+    alt: "Digital system matrix grid"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1000",
+    alt: "Abstract visual tech coding"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1000",
+    alt: "Close-up mechanised programming keyboard"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000",
+    alt: "Modern clean coding setup"
+  }
+];
 
 // learningPaths constant removed
 
@@ -866,32 +895,58 @@ export default function CustomApp() {
         </div>
       </section>
 
-      {/* 9. Developer Canvas Visuals */}
-      <section id="gallery" className="relative py-16 border-t border-white/5">
-        <div className="text-center mb-16">
+      {/* 9. Scroll Velocity Gallery */}
+      <section id="gallery" className="relative py-16">
+        <div className="text-center mb-12">
           <Badge variant="outline" className="mb-4 border-red-500/20 bg-red-950/10 text-red-400 uppercase tracking-wider text-[10px] font-bold">
-            Asset Gallery
+            Interactive Stream
           </Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
             Developer Canvas Visuals
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto mt-4 text-sm sm:text-base font-medium">
-            Explore our interactive workspace layouts, release tag logs, and asset libraries.
+            Scroll down to watch our developer canvas assets glide horizontally based on your scroll velocity.
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-stretch justify-center gap-8 max-w-5xl mx-auto px-6">
-          {/* Vertical scroll area card */}
-          <div className="p-8 rounded-2xl border border-white/5 bg-[#0a0a0e]/80 backdrop-blur-md shadow-xl flex flex-col items-center flex-1 max-w-sm">
-            <h3 className="text-sm font-bold text-zinc-300 mb-6 uppercase tracking-wider">Release Tags</h3>
-            <ScrollAreaDemo />
-          </div>
+        {/* Velocity Scroll Image Rows */}
+        <div className="w-full overflow-hidden flex flex-col space-y-6 py-6 z-10 relative">
+          <ScrollVelocity velocity={3} className="py-2">
+            {parallaxImages.map((img, idx) => (
+              <div
+                key={idx}
+                className="relative h-[8rem] w-[12rem] md:h-[12rem] md:w-[18rem] xl:h-[16rem] xl:w-[24rem] rounded-xl overflow-hidden border border-white/10 shadow-2xl hover:scale-105 transition-transform duration-300 pointer-events-auto"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
+            ))}
+          </ScrollVelocity>
 
-          {/* Horizontal scroll area card */}
-          <div className="p-8 rounded-2xl border border-white/5 bg-[#0a0a0e]/80 backdrop-blur-md shadow-xl flex flex-col items-center justify-between flex-1 max-w-xl">
-            <h3 className="text-sm font-bold text-zinc-300 mb-6 uppercase tracking-wider">Asset Library</h3>
-            <ScrollAreaHorizontalDemo />
-          </div>
+          <ScrollVelocity velocity={-3} className="py-2">
+            {[...parallaxImages].reverse().map((img, idx) => (
+              <div
+                key={idx}
+                className="relative h-[8rem] w-[12rem] md:h-[12rem] md:w-[18rem] xl:h-[16rem] xl:w-[24rem] rounded-xl overflow-hidden border border-white/10 shadow-2xl hover:scale-105 transition-transform duration-300 pointer-events-auto"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
+            ))}
+          </ScrollVelocity>
+        </div>
+
+        {/* Text bottom of the pictures */}
+        <div className="text-center mt-12 flex justify-center z-10 relative">
+          <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-500 bg-red-950/20 border border-red-500/30 px-6 py-3 rounded-full backdrop-blur-md shadow-lg shadow-red-900/5 select-none animate-pulse">
+            ASSET GALLERY
+          </span>
         </div>
       </section>
 
