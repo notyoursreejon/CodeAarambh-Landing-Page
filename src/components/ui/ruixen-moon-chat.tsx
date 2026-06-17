@@ -72,7 +72,7 @@ export default function RuixenMoonChat() {
     <div className="relative w-full flex flex-col items-center bg-transparent">
       {/* Centered AI Title */}
       <div className="flex-1 w-full flex flex-col items-center justify-center pt-8 text-center">
-        <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight leading-none text-white drop-shadow-sm bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
+        <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight leading-none text-transparent drop-shadow-sm bg-gradient-to-r from-red-500 via-orange-400 to-blue-500 bg-clip-text">
           CodeAarambh
         </h1>
         <p className="mt-4 text-base sm:text-lg text-neutral-300 font-medium tracking-wide">
